@@ -1,0 +1,380 @@
+.admin{
+    width: 100%;
+    height: auto;
+}
+.adminLeft{
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(3, 76, 178);
+    color: black;
+    box-shadow: 0 0 30px 3px;
+    display: flex;
+}
+.adminLeftLinks{
+    margin: auto;
+}
+.adminLeftLink{
+    transition: .3s;
+    margin-bottom: 10px;
+}
+.adminLeftLink a{
+    padding: 30px;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+.adminLeftLink a h4{
+    font-weight: normal;
+    font-size: 15px;
+}
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-15px);}
+    60% {transform: translateY(-7px);}
+}
+.adminLeftLink:hover{
+    background-color: rgb(46, 89, 199);
+    border-radius: 20px;
+}
+.adminLeftLink:hover a img{
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.adminLeft a img{
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+thead{
+    z-index: 1;
+    position: sticky;
+    color: white;
+    top: 0px;
+    background-color: rgb(3, 76, 178);
+}
+thead th{
+    height: 40px;
+}
+.tableUpper{
+    color: white;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    font-size: 25px;
+}
+.adminRight{
+    background-color: rgb(212, 212, 212);
+    width: 85%;
+    min-height: 100vh;
+    height: auto;
+    margin-left: 15%;
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.adminRightTitleUpper{
+    width: 100%;
+    height: 10vh;
+}
+.adminRightTitleMiddle{
+    width: 100%;
+    height: 30vh;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adminRightTitleLower{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+}
+.adminRightTitleLower a{
+    display: block;
+    margin: 20px;
+    width: 30%;
+    height: 70%;
+}
+.adminLinks{
+    background-color: rgb(3, 76, 178);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px black;
+    font-size: 30px;
+    display: block;
+    height: 90%;
+    width: 100%;
+    padding: 30px;
+    transition: .2s;
+}
+.adminLinks img{
+    width: 100%;
+    object-fit: contain;
+    padding: 5px;
+    transition: .3s;
+}
+.adminLinks:hover{
+    background-color: rgb(0, 42, 147);
+    .adminLinksUpper img{
+        scale: 1.2;
+    }
+}
+.adminLinksLower{
+    height: 30%;
+    padding-top: 25px;
+    text-align: center;
+}
+.adminLinksUpper{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+.submit{
+    width: 90%;
+    height: 100%;
+    font-size: 20px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.submit input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    outline: none;
+    margin: auto;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+.submit label{
+    line-height: 30px;
+}
+.actionButtons{
+    width: 20px;
+    margin: 5px;
+    cursor: pointer;
+    opacity: .7;
+    transition: .3s;
+}
+.actionButtons:hover{
+    opacity: 1;
+}
+.inputGridContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.inputContainer{
+    background: lightgray;
+    color: black;
+    margin: 20px;
+    line-height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    height: auto;
+    display: block;
+}
+.submitButton{
+    display: flex;
+    background: lightgray;
+    margin: auto;
+    width: 97%;
+    justify-content: center;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 50px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: .2s;
+}
+.submitButton:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 15px 1px black;
+}
+.inputImageContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.addImage{
+    height: 30px;
+    width: auto;
+    margin: 5px 0;
+    padding: 0 3px;
+    background:  rgb(3, 76, 178);
+    color: white;
+    border-radius: 3px;
+    border: 1px solid black;
+    line-height: 25px;
+    cursor: pointer;
+}
+.deleteImage{
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 0;
+}
+.imageX{
+    color: rgb(104, 104, 104);
+    transition: .2s;
+}
+.imageX:hover{
+    color: red;
+}
+.rightUpper{
+    width: 85%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    justify-content: space-between;
+    padding-top: 50px;
+    color: white;;
+}
+.table{
+    width: 90%;
+    height: 80vh;
+    margin:  50px auto;
+    background-color: rgb(3, 76, 178);
+    color: gray;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 1px darkgrey;
+    overflow-y: auto;
+}
+.adminRightContent{
+    width: 90%;
+    height: auto;
+    margin:  50px auto;
+    background-color: rgb(3, 76, 178);
+    color: gray;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 1px darkgrey;
+}
+.table tr:first-child  td{
+    background-color: rgb(3, 76, 178);
+}
+.table td{
+    text-align: center;
+    padding: 10px;
+}
+.admin table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1px auto;
+}
+.adminProduct{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 1px;
+    display: flex;
+    margin-top: 30px;
+}
+.adminProductDetails{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.adminProductImage{
+    width: 90%;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid gray;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 15px;
+}
+.adminProductImages{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.buttons a{
+    width: 50%;
+    height: 100%;
+}
+.grayBackground{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 144, 144, 0.504);
+    display: flex;
+}
+.deleteProduct{
+    margin: auto;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 15px 2px black;
+}
+.deleteProductUpper{
+    width: 100%;
+    height: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deleteProductLower{
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.deleteButtons{
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    color: white;
+}
+.cancelButtonProducts{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(0, 136, 255);;
+}
+.deleteButtonProducts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-emphasis: center;
+    border-bottom-right-radius: 20px;
+    background-color: red;
+}
+.adminTitle{
+    padding: 10px;
+    font-size: 25px;
+}

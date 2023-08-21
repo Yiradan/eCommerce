@@ -1,0 +1,530 @@
+@import url('https://fonts.cdnfonts.com/css/regencie');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@100&display=swap');
+*{
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    text-decoration: none;
+}
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image: url("../public/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    transition: .4s;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+    padding: 0 5vh;
+    box-shadow: 0 0 60px 1px black;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.card-upper{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 75%;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    > a {
+        width: 100%;
+        height: 75%;
+    }
+}
+.card-upper a img:nth-child(1){
+    position: relative;
+    object-fit: contain;
+    width: 100%;
+    padding: 30px;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.card-lower{
+    overflow: auto;
+    height: 25%;
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card{
+    box-shadow: 0 0 15px 0;
+    width: 90%;
+    margin: 30px 0;
+    height: auto;
+    border-radius: 10px;
+    transition: .3s;
+}
+.card:hover{
+    box-shadow: 0 0 30px 2px rgb(255, 50, 255);
+    scale: 1.03;
+}
+.products{
+    padding: 0 5vh;
+    padding-top: 5vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgb(13,13,13);
+    min-height: 86vh;
+}
+.emptyList{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 86vh;
+    color: white;
+    background-color: rgb(13,13,13);
+}
+.cardLowerUpper{
+    display: flex;
+    justify-content: space-between;
+}
+.card-upper img:nth-child(2){
+    position: absolute;
+    width: 20px;
+    top: 15px;
+    right: 15px;
+}
+.pageNotFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.pageNotFoundContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 85vh;
+    > a .stLower{
+        margin: 50px 0;
+        border: 2px solid black;
+        padding: 15px;
+        cursor: pointer;
+        transition: .3s;
+        font-size: 20px;
+        border-radius: 30px;
+        color: gray;
+        background-color: rgb(13,13,13);
+    }
+    > a .stLower:hover{
+        background-color: white;
+        color: black;
+        box-shadow: 0 0 15px 1px white;
+    }
+}
+.pageNotFoundContent img{
+    margin: 20vh auto 0 auto;
+    width: 40vw;
+    height: auto;
+}
+.toast-message{
+    top: 11vh;
+    color: white;
+    background: linear-gradient(135deg, cyan, magenta);
+}
+.logoText{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.homeLeft{
+    display: flex;
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgb(13,13,13), rgb(13,13,13), rgb(13,13,13,0.5));
+    backdrop-filter: blur(10px);
+    > .homeLeftContent{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        > .bigLogo{
+            > h1{
+                font-size: 50px;
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            > img{
+                width: 40%;
+                height: auto;
+                background: linear-gradient(135deg, magenta, cyan);
+                border-radius: 20px;
+            }
+        }
+        > h3{
+            font-family: 'Regencie', sans-serif;
+            letter-spacing: 5px;
+            color: lightgray;
+            font-size: 25px;
+        }
+    }
+}
+.homeRight{
+    position: absolute;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    >a .toTheShop{
+        width: auto;
+        height: auto;
+        font-size: 35px;
+        padding: 10px 30px;
+        color: white;
+        background-color: black;
+        border: 2px solid white;
+        text-align: center;
+        transition: .5s;
+        position: relative;
+        display: inline-block;
+        font-family: 'Regencie', sans-serif;
+    }
+    >a .toTheShop:hover{
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding-right: 50px;
+        padding-left:8px;
+    }
+    >a .toTheShop:after{
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        right: -30px;
+        transition: 0.5s;
+        font-size: 50px;
+        line-height: 35px;
+        color: black;
+    }
+    >a .toTheShop:hover::after{
+        opacity: 1;
+        right: 15px;
+        font-size: 50px;
+    }
+}
+.navbarLeft{
+    width: 15%;
+    font-size: 20px;
+    >a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        > img{
+            background: linear-gradient(135deg,cyan,magenta);
+            margin-right: 15px;
+            border-radius: 5px;
+            width: 50px;
+            height: auto;
+    }
+    }
+}
+.navbarMiddle{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: .4s;
+    > a h3{
+        color: white;
+        transition: .4s;
+        font-size: 22px;
+        font-weight: normal;
+        font-family: 'Regencie', sans-serif;
+    }
+    > a h3:hover{
+        color: rgb(170, 79, 255);
+        cursor: pointer;
+        transform: translateY(2px);
+        text-shadow: 3px white;
+    }
+}
+.navbarRight{
+    display: flex;
+    justify-content: space-evenly;
+    width: 5%;
+    > a img{
+        width: 3vh;
+        height: auto;
+    }
+    > .navbarFavorites{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 3vh;
+        height: 3vh;
+        cursor: pointer;
+        > a img{
+            width: 100%;
+            height: auto;
+        }
+        > .favoritesNumber{
+            position: absolute;
+            color: rgb(13,13,13);
+            background-color: white;
+            border-radius: 50%;
+            width: auto;
+            height: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: -5px;
+            right: -7px;
+            font-size: 13px;
+            padding: 3px;
+            font-weight: bold;
+        }
+    }
+    >img {
+        cursor: pointer;
+        height: 3vh;
+        width: auto;
+    }
+}
+.productsNavbar{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    padding: 20px;
+    justify-content: right;
+    > .navbarRight {
+        width: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        > .navbarFavorites{
+            > a{
+                width: 10vh;
+                height: 10vh;
+                > img{
+                    width: 3vh;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+.dreamy{
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    font-size: 15px;
+    font-family: 'Regencie', sans-serif;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(135deg, cyan, purple);
+}
+.orderPlaced{
+    margin-top: 10vh;
+    width: 100%;
+    min-height: 90vh;
+    background-color: rgb(13,13,13);
+    display: flex;
+    > .orderPlacedContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80vh;
+        padding: 100px;
+        margin: 0 auto;
+        width: 80%;
+        color: white;
+        > img{
+            margin: 30px;
+            width: 25%;
+        }
+        > a {
+            width: 40%;
+            > .backToShop{
+                width: 100%;
+                background-color: rgb(13,13,13);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 50px 0;
+                border: 2px solid white;
+                padding: 15px;
+                cursor: pointer;
+                transition: .3s;
+                font-size: 20px;
+                border-radius: 30px;
+                color: gray;
+            }
+            > .backToShop:hover{
+                background-color: white;
+                color: black;
+                box-shadow: 0 0 15px 1px white;
+            }
+        }
+    }
+}
+.searchEngine{
+    width: 100%;
+    height: 3vh;
+    background-color: rgb(13,13,13);
+    margin-top: 10vh;
+    padding: 2vh 0;
+    display: flex;
+}
+.searchbar-input{
+    width: 0;
+    outline: none;
+    padding-left: 10px;
+    background-color: transparent;
+}
+.searchbar{
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 15px;
+    padding: 5px;
+}
+.searchbar-exit{
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    line-height: 20px;
+    cursor: pointer;
+}
+.search-icon{
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+}
+.searchbar-buttons{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+}
+.searchbar-buttons:hover{
+    > .searchbar-exit{
+        animation: rotate 1s ease;
+    }
+}
+.orderTable{
+    border-top: 4px solid black;
+}
+.orderTable:nth-child(2){
+    border-top: none;
+}
+.about{
+    margin-top: 10vh;
+    width: 100%;
+    min-height: 90vh;
+    background-color: rgb(13,13,13);
+    display: flex;
+    > .aboutContent{
+        margin: auto;
+        width: 70%;
+        height: 80vh;
+        background-color: rgb(26,26,26);
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        > .images {
+            width: 40%;
+            height: 90%;
+            position: relative;
+            > img{
+                height: 60%;
+                position: absolute;
+                border-radius: 5%;
+            }
+        }
+        > .text{
+            width: 40%;
+            height: 60%;
+            color: rgb(169, 169, 169);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            font-weight: 100;
+            > h4{
+                letter-spacing: 3px;
+                line-height: 20px;
+                font-family: 'Regencie', sans-serif;
+            }
+            > .bemutatkozo{
+                font-family: 'Regencie', sans-serif;
+                letter-spacing: 3px;
+                line-height: 25px;
+                font-size: 16px;
+                text-align: justify;
+                color: rgb(169, 169, 169);
+            }
+            > .contact{
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                > a {
+                    > img{
+                        width: 40px;
+                        height: auto;
+                        opacity: .5;
+                        transition: .4s;
+                    }
+                    > img:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,340 @@
+.cartFavorites{
+    margin-top: 10vh;
+    background-color: rgb(13,13,13);
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > .cfContent{
+        min-height: 75vh;
+        width: 80%;
+        > .cfUpper{
+            margin-top: 50px;
+            padding: 0 3%;
+            height: 15%;
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        > .ecfLower{
+            margin-top: 30px;
+            height: 50vh;
+            width: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            > a:hover{
+                background-color: white;
+                color: black;
+            }
+            > a {
+                transition: .3s;
+                width: 30%;
+                height: auto;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+                color: white;
+                background-color: black;
+                border: 2px solid white;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        > .checkoutLower{
+            margin-top: 30px;
+            height: 85%;
+            width: 100%;
+            margin-bottom: 100px;
+            color: white;
+            > form > .submit{
+                > .subTotal{
+                    > .stLower{
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        > button{
+                            width: 40%;
+                            background-color: rgb(13,13,13);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 50px 0;
+                            border: 2px solid white;
+                            padding: 15px;
+                            cursor: pointer;
+                            transition: .3s;
+                            font-size: 20px;
+                            border-radius: 30px;
+                            color: gray;
+                        }
+                        > button:hover{
+                            background-color: white;
+                            color: black;
+                            box-shadow: 0 0 15px 1px white;
+                        }
+                        > a {
+                            width: 40%;
+                            > button{
+                                width: 100%;
+                                background-color: rgb(13,13,13);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 50px 0;
+                                border: 2px solid white;
+                                padding: 15px;
+                                cursor: pointer;
+                                transition: .3s;
+                                font-size: 20px;
+                                border-radius: 30px;
+                                color: gray;
+                        }
+                        > button:hover{
+                            background-color: white;
+                            color: black;
+                            box-shadow: 0 0 15px 1px white;
+                        }
+                        }
+                    }
+                    > .stUpper{
+                        margin: 50px 0;
+                    }
+                }
+                > .sInput{
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                    > .sInputContainer{
+                        height: 60px;
+                        border-radius: 50px;
+                        display: flex;
+                        align-items: center;
+                        background-color: gray;
+                        padding-left: 10px;
+                        width: 95%;
+                        margin: 20px;
+                        border: 2px solid gray;
+                        > img{
+                            padding-left: 10px;
+                            height: 40px;
+                            width: auto;
+                        }
+                        > input{
+                            line-height: 40px;
+                            height: 50px;
+                            font-size: 25px;
+                            padding: 0 20px;
+                            border-radius: 50px;
+                            color: white;
+                            background-color: rgb(13,13,13);
+                            margin: 15px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        > .cfLower{
+            margin-top: 30px;
+            height: 85%;
+            width: 100%;
+            margin-bottom: 100px;
+            > .cfProduct:hover{
+                scale: 1.01;
+                box-shadow: 0 0 15px 1px magenta;
+            }
+            > .cfProduct{
+                transition: .3s;
+                background: rgb(20,20,20);
+                height: 30vh;
+                width: 100%;
+                display: flex;
+                border-radius: 20px;
+                margin: 40px 0;
+                > a {
+                    height: 100%;
+                    width: 90%;
+                    display: flex;
+                }
+                > a .cfpi{
+                    width: auto;
+                    height: 100%;
+                    > img{
+                        width: 100%;
+                        height: 100%;
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        padding: 5px;
+                        background-color: white;
+                    }
+                }
+                > a .cfpd{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    padding: 30px;
+                    color: white;
+                }
+                > .cfpa{
+                    width: 10%;
+                    height: 100%;
+                    border-left: 1px red;
+                    > .cfDel:hover{
+                        background-color: red;
+                    }
+                    > .cfDel {
+                        border-top-right-radius: 20px;
+                        width: 100%;
+                        height: 50%;
+                        transition: .3s;
+                        display: flex;
+                        cursor: pointer;
+                        > img {
+                            margin: auto;
+                            width: 30%;
+                            height: auto;
+                        }
+                    }
+                    > .cfCart:hover{
+                        background-color: magenta;
+                    }
+                    > .cfCart{
+                        transition: .3s;
+                        width: 100%;
+                        height: 50%;
+                        border-bottom-right-radius: 20px;
+                        display: flex;
+                        cursor: pointer;
+                        > img{
+                            margin: auto;
+                            width: 30%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.cProduct:hover{
+    scale: 1.01;
+    box-shadow: 0 0 15px 1px magenta;
+}
+.cProduct{
+    transition: .3s;
+    background: rgb(20,20,20);
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    margin: 40px 0;
+    > a {
+        height: 100%;
+        width: 70%;
+        display: flex;
+    }
+    > a .cpi{
+        width: auto;
+        height: 100%;
+        > img{
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding: 5px;
+            background-color: white;
+        }
+    }
+    > a .cpd{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 30px;
+        color: white;
+    }
+    > .cpt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+        color: white;
+        > .quantityButtons{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 40%;
+            > img{
+                width: 20%;
+                height: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    > .cpa{
+        width: 10%;
+        height: 100%;
+        border-left: 1px red;
+        > .cDel:hover{
+            background-color: red;
+        }
+        > .cDel {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 100%;
+            height: 100%;
+            transition: .3s;
+            display: flex;
+            cursor: pointer;
+            > img {
+                margin: auto;
+                width: 30%;
+                height: auto;
+            }
+        }
+    }
+}
+.subTotal{
+    width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > .stUpper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    > a {
+        width: 30%;
+        display: flex;
+        margin: 50px 0;
+        > .stLower{
+            width: 100%;
+            border: 2px solid white;
+            padding: 15px;
+            cursor: pointer;
+            transition: .3s;
+            font-size: 20px;
+            border-radius: 30px;
+            color: gray;
+            text-align: center;
+        }
+    }
+    > a .stLower:hover{
+        background-color: white;
+        color: black;
+        box-shadow: 0 0 15px 1px white;
+    }
+}
